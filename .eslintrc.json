@@ -1,0 +1,8 @@
+{
+    "extends": [
+        "@reativ/eslint-config/node"
+    ],
+    "rules": {
+        "no-useless-constructor": "off"
+    }
+}
