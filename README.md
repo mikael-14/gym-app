@@ -34,7 +34,7 @@ This is a simple app for a gym made with Node JS, using REST API
 - [ ] User gonna be identifyied by a JWT token
 
 
-## installation 
+## Installation 
 ```
  npm init -y //inicialize npm
  npm i fastify //node express was descontinued, so let's user fastify
@@ -71,9 +71,16 @@ For configuration prisma
 
 # Design pattern
 
-- Repository 
-- Inversão de dependencias: O que cria a classe é que diz o que vai ser criado 
-- Fatorizar código 
+## Repository 
+
+Repository Design Pattern is a structural pattern that separates the logic that retrieves data from the underlying storage (such as a database) from the business logic of the application. This pattern is commonly used to manage the persistence layer in an application.
+
+
+## The Dependency Inversion Principle (DIP) 
+
+The Dependency Inversion Principle (DIP) is one of the SOLID principles of object-oriented design. DIP states that high-level modules should not depend on low-level modules but rather both should depend on abstractions. In other words, it encourages the use of abstractions (interfaces or abstract classes) to decouple high-level and low-level components, allowing for more flexibility, scalability, and easier maintenance.
+To implement the Dependency Inversion Principle in JavaScript, you often use interfaces (or abstract classes) to define contracts, and then you have concrete implementations that adhere to those contracts.
+
 
 # Testing
 
