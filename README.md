@@ -2,16 +2,17 @@
 
 This is a simple app for a gym made with Node JS, using REST API 
 
+
 ## Functional Requirements 
 
 - [x] Register
-- [ ] Authentication
-- [ ] Profile
+- [x] Authentication
+- [x] Profile
 - [ ] Check-in by user (number)
 - [ ] User history check-in 
 - [ ] Search closest gym by coordinates
 - [ ] Search gym by name
-- [ ] User make check-in
+- [x] User make check-in
 - [ ] Validate check-in from a user
 - [ ] Create a gym 
 
@@ -19,8 +20,8 @@ This is a simple app for a gym made with Node JS, using REST API
 ## Model rules
 
 - [x] User can't register with duplicate email
-- [ ] User can't make multiple check-in in a single day
-- [ ] User can't make check-in if user isn't closest to gym (100m)
+- [x] User can't make multiple check-in in a single day
+- [x] User can't make check-in if user isn't closest to gym (100m)
 - [ ] Check-in only can be validated until 20min after created
 - [ ] Check-in only can be validated by administrators
 - [ ] Only administrators can create gyms
@@ -48,8 +49,17 @@ This is a simple app for a gym made with Node JS, using REST API
  npm i -D @types/bcryptjs //for typescript version of crypt library
  npm i -D @types/node //for typescript version of crypt library
  tsc --init // for generating tsconfig 
+ npm i dayjs //for working with dates
  ```
 
+install test dependencies
+
+```
+npm i -D vitest //for testing use esbuild exists ither 
+npm i -D vitest-tsconfig-paths //for using the paths configured in typescript
+npm i -D @vitest/coverage-v8 //to see how many of the code are covered by tests 
+npm i -D @vitest/ui //interface for unit tests
+```
 ### File .npmrc
 Here we gonna say to npm to install exact version from package.json (not adding the ^ in versions)
 
@@ -81,9 +91,25 @@ Repository Design Pattern is a structural pattern that separates the logic that 
 The Dependency Inversion Principle (DIP) is one of the SOLID principles of object-oriented design. DIP states that high-level modules should not depend on low-level modules but rather both should depend on abstractions. In other words, it encourages the use of abstractions (interfaces or abstract classes) to decouple high-level and low-level components, allowing for more flexibility, scalability, and easier maintenance.
 To implement the Dependency Inversion Principle in JavaScript, you often use interfaces (or abstract classes) to define contracts, and then you have concrete implementations that adhere to those contracts.
 
+## Clean code
+
+Use variables explicit the name of function 
 
 # Testing
 
-For testing gonna use data in memory, for not presiting data in database
+## Unit tests
+
+Should be a lot of diferent test, for testint the unit (explicit function)
+For testing gonna use data in memory, for not presiting data in database, because test should use most isolated possible
+
+## Test-driven development (TDD) 
+
+Test-driven development (TDD) is a software development approach in which tests are written before the code they are intended to validate.
+While TDD can be a powerful approach, it requires a mindset shift and discipline. Developers need to be committed to writing tests first and embracing the iterative nature of the process
+
+## Tests end to end
+
+
+
 
 
