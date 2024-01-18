@@ -78,6 +78,7 @@ For configuration prisma
 ## Prisma
 
 ``` npx prisma migrate dev ``` for migrate the schema to be created in database
+``` npx prisma studio ``` to open ui to see database schema
 
 # Design pattern
 
@@ -95,6 +96,10 @@ To implement the Dependency Inversion Principle in JavaScript, you often use int
 
 Use variables explicit the name of function 
 
+## Domain-driven design (DDD)
+
+Domain-driven design (DDD) is a major software design approach, focusing on modeling software to match a domain according to input from that domain's experts. Under domain-driven design, the structure and language of software code (class names, class methods, class variables) should match the business domain
+
 # Testing
 
 ## Unit tests
@@ -109,7 +114,19 @@ While TDD can be a powerful approach, it requires a mindset shift and discipline
 
 ## Tests end to end
 
+### configuration 
+Create a file for the test environment. Inside prisma/vitest-environment-prisma/
 
+- ```  npm init -y ``` to generate a package.json file with default values 
+- prisma-test-environment.ts  
+
+After you need to link node modules, because we want to use the main package.json see command "test:create-prisma-environment" and "test:install-prisma-environment"
+
+### Run 
+
+``` npm run teste:e2e ```
+
+Here, because we are using postgresql, we can have multiple schemas inside same database, so we can create a new schema and remove in end for ours tests.(Isolate the database) 
 
 
 
