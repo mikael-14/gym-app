@@ -8,13 +8,13 @@ This is a simple app for a gym made with Node JS, using REST API
 - [x] Register
 - [x] Authentication
 - [x] Profile
-- [ ] Check-in by user (number)
-- [ ] User history check-in 
-- [ ] Search closest gym by coordinates
-- [ ] Search gym by name
+- [x] Check-in by user (number)
+- [x] User history check-in 
+- [x] Search closest gym by coordinates
+- [x] Search gym by name
 - [x] User make check-in
-- [ ] Validate check-in from a user
-- [ ] Create a gym 
+- [x] Validate check-in from a user
+- [x] Create a gym 
 
 
 ## Model rules
@@ -22,16 +22,16 @@ This is a simple app for a gym made with Node JS, using REST API
 - [x] User can't register with duplicate email
 - [x] User can't make multiple check-in in a single day
 - [x] User can't make check-in if user isn't closest to gym (100m)
-- [ ] Check-in only can be validated until 20min after created
-- [ ] Check-in only can be validated by administrators
-- [ ] Only administrators can create gyms
+- [x] Check-in only can be validated until 20min after created
+- [x] Check-in only can be validated by administrators
+- [x] Only administrators can create gyms
 
 
 ## Non functional requirements
 
 - [x] User password must be cryptographically
 - [x] Data gonna be prestited in PostgreSql
-- [ ] Every lists gonna be paginated (20 rows for page)
+- [x] Every lists gonna be paginated (20 rows for page)
 - [ ] User gonna be identifyied by a JWT token
 
 
