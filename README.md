@@ -32,7 +32,7 @@ This is a simple app for a gym made with Node JS, using REST API
 - [x] User password must be cryptographically
 - [x] Data gonna be prestited in PostgreSql
 - [x] Every lists gonna be paginated (20 rows for page)
-- [ ] User gonna be identifyied by a JWT token
+- [x] User gonna be identifyied by a JWT token
 
 
 ## Installation 
@@ -40,7 +40,7 @@ This is a simple app for a gym made with Node JS, using REST API
  npm init -y //inicialize npm
  npm i fastify //node express was descontinued, so let's user fastify
  npm i -D typescript tsx tsup // typescript, tsx for serving file, tsup for building
- npm i dotenv zod // dotenv for readin .env, zod for validating schema 
+ npm i dotenv zod // dotenv for readin .env, zod for validating data 
  npm i -D eslint @reativ/eslint-config //installin eslint for automatic ident code 
  npm i -D prisma //for reading data from database - ORM
  npm i @prisma/client //Prisma Client JS is an auto-generated query builder that enables type-safe database access
@@ -50,6 +50,7 @@ This is a simple app for a gym made with Node JS, using REST API
  npm i -D @types/node //for typescript version of crypt library
  tsc --init // for generating tsconfig 
  npm i dayjs //for working with dates
+ npm i -D supertest @types/supertest //for tests e2e and @types for typescript module 
  ```
 
 install test dependencies
@@ -123,6 +124,10 @@ Create a file for the test environment. Inside prisma/vitest-environment-prisma/
 After you need to link node modules, because we want to use the main package.json see command "test:create-prisma-environment" and "test:install-prisma-environment"
 
 ### Run 
+
+``` npm run pretest:e2e ```
+
+Run this once to setu the test environment
 
 ``` npm run teste:e2e ```
 
